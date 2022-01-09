@@ -19,8 +19,8 @@
           <div class="modal-header">
             <h4 class="modal-title" class="text-primary"> <strong> New Employee</strong> </h4>
           </div>
-          <div class="modal-body">
-            <form>
+          <div class="modal-body" *ngIf="employeFormGroup">
+            <form [formGroup]="employeFormGroup">
                 
 
             <div class="row">
@@ -30,13 +30,15 @@
                  <ng-container *ngIf="panelNum == 1"> 
                      <div class="form-group">
                     <label class="text-primary">Employee name</label>
-                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" formControlName="name">
                    </div>
+                   
+                  
                   <div class="form-group">
                       <div class="row">
                           <div class="col">
                             <label style="color: #fa3a0e;">Display name:</label>
-                            <input type="text" class="form-control" style="border-color:#fa3a0e ;">
+                            <input type="text" class="form-control" style="border-color:#fa3a0e ;" formControlName="displayName">
                           </div>
                           <div class="col">
 
@@ -44,23 +46,26 @@
                       </div>
                    <div   class="mt-4" style="background-color: gray; height: 3px;"> </div>
                   </div>
+                  
                   <div class="form-group">
                     <label for="">Port:</label>
-                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                    <input type="number" class="form-control" formControlName="port">
                    </div>
                    <div class="form-group">
+                    
                     <label for="">WorK Site:</label>
-                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" formControlName="workSite">
                    </div>
                    <div class="form-group">
                     <div class="row">
-                        <div class="col">
+                      <div class="col">
                           <label for="">Active from:</label>
-                          <input type="date" class="form-control"  placeholder="name">
+                          <input type="date" class="form-control" fornControlName="activeUntil">
                         </div>
+                        
                         <div class="col">
                             <label for="">Active trought:</label>
-                            <input type="date" class="form-control"  placeholder="name">
+                            <input type="date" class="form-control" fornControlName="activeTrought">
                          
                         </div>
                         <div class="col">
@@ -69,20 +74,19 @@
                     </div>
                  <div   class="mt-4" style="background-color: gray; height: 3px;"> </div>
                 </div>
-               
-
-
-                </ng-container>
+              </ng-container>
                  <ng-container *ngIf="panelNum == 2"> 
                     <div class="form-group">
-                        <label for="">Employee IDCode:</label>
-                        <input type="text" class="form-control">
+                      
+                    
+                        <label >Employee IDCode:</label>
+                        <input type="text" class="form-control" formControlName="employeIdCode">
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col">
                                 <label for="">Work Location:</label>
-                                <select name=""class="form-control"  id="">
+                                <select  class="form-control" formControlName="namelocation" >
                                     <option>  </option>
                                     <option value=""> Douala</option>
                                     <option value=""> Yaounde</option>
@@ -95,16 +99,19 @@
                             </div>
                         </div>
                           </div>
-
+                        
+                          
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Description</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label  >Description</label>
+                        <textarea class="form-control"  formControlName="description" rows="3"></textarea>
                     </div>
                  </ng-container>
+
+
                  <ng-container *ngIf="panelNum == 3"> 
                      <div class="form-group">
                          <label> Employees Skills</label>
-                        <select name=""class="form-control"  id="">
+                        <select name=""class="form-control"  formControlName="employeSkill">
                             <option>  </option>
                             <option value=""> Douala</option>
                             <option value=""> Yaounde</option>
@@ -114,7 +121,8 @@
                    
                     <div class="form-group">
                         <label >Additional Skills</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                        
+                        <textarea class="form-control" formControlName="additionalSkills" rows="7"></textarea>
                     </div>
             
                 </ng-container>
@@ -130,7 +138,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label for="">Position: </label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" formControlName="position">
                         </div>
                     </div>
                     <div class="col">
@@ -138,12 +146,10 @@
                             <label >Shift times: </label>
                             <div class="row">
                                 <div class="col">
-
-                                    <input type="text" class="form-control">
+                                  <input type="text" class="form-control" fornControlName="shiftTime1">
                                 </div>
                                 <div class="col">
-
-                                    <input type="text" class="form-control">
+                                  <input type="text" class="form-control" formControlName="shiftTime2">
                                 </div>
                             </div>
                         </div>
@@ -157,11 +163,11 @@
                             <div class="row">
                                 <div class="col">
 
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" formControlName="mealTime1">
                                 </div>
                                 <div class="col">
 
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" formControlName="mealTime2">
                                 </div>
                             </div>
                         </div>
@@ -172,25 +178,25 @@
                             <label for=""> RDOs (eg: 1 for monday) </label>
                             <div class="row d-flex">
                               <div class="col">
-                                  <input type="checkbox" name="" class="form-check-input"></div>
-                              <div class="col">
-                             <input type="checkbox" name="" class="form-check-input"></div>
-                              <div class="col">
+                                  <input type="checkbox" formControlName="rdocheck1" class="form-check-input"></div>
+                                   <div class="col">
+                                    <input type="checkbox"  formControlName="rdocheck2" class="form-check-input"></div>
+                                     <div class="col">
                             
-                                   <input type="checkbox" name="" class="form-check-input"></div>
-                              <div class="col">
+                                   <input type="checkbox" formControlName="rdocheck3"  class="form-check-input"></div>
+                                    <div class="col">
                     
 
-                                <input type="checkbox" name="" class="form-check-input"></div>
+                                <input type="checkbox"  formControlName="rdocheck4" class="form-check-input"></div>
                               <div class="col">
                           
-                                <input type="checkbox" name="" class="form-check-input"></div>
+                                <input type="checkbox"  formControlName="rdocheck5"  class="form-check-input"></div>
                               <div class="col">
                                 
-                                   <input type="checkbox" name="" class="form-check-input"></div>
+                                   <input type="checkbox"  formControlName="rdocheck6"  class="form-check-input"></div>
                               <div class="col">
                             
-                                  <input type="checkbox" name="" class="form-check-input"></div>
+                                  <input type="checkbox"  formControlName="rdocheck7"  class="form-check-input"></div>
                                 </div>
                         </div>
                         
@@ -201,7 +207,7 @@
                    <div class="row mb-3">
                        <div class="col">
                         <label> Stagger RDOs:</label>
-                        <select  class="form-control" >
+                        <select  class="form-control" formControlName="staggerRdo">
                            
                             <option value=""> N/A</option>
                             <option value=""> N/B</option>
@@ -228,7 +234,7 @@
 
                  </div>
                
-                 <button type="button" class="btn btn-primary float-right" *ngIf="panelNum == 4">submit</button>
+                 <button type="button" class="btn btn-primary float-right" (click)="onSaveNewWorkUnit()" *ngIf="panelNum == 4">submit</button>
                  <button type="button" class="btn btn-primary float-right" (click)="next()" *ngIf="panelNum < 4">Next</button>
                  
                  <button type="button" class="btn btn-outline-primary border border-primary float-right" (click)="closePopup()">Cancel</button>

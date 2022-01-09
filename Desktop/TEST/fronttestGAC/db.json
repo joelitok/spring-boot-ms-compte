@@ -1,95 +1,119 @@
 { 
   
 "workunits":[
-  {
+{
 
-    "id":1,
-   "name":"Developpeur_mobile",
-    "activeUntil":"12/12/2021",
-    "displayName":"Developpeur",
-    "port":"20",
-    "location":"Douala",
-    "workUnitSkills":[
-      {"id":1,
-     "active":true,
-     "skill":{
-       "id":1,
-       "name":"course",
-       "workUnitSkills":[
-           {
-             "id":1,
-             "active":true,
-             "skill":{},
-             "workUnit":{}  
-           }
-       ]
-
-      },
-     "workUnit":{ }
-     }],
-    "additionalSkills":"lorem lorem lorem bonjour joel"
-  }  ,
-
-  {
-
-    "id":2,
-   "name":"Developpeur_web",
-    "activeUntil":"12/12/2021",
-    "displayName":"Developpeur",
-    "port":"22",
-    "location":"Douala",
-    "workUnitSkills":[
-         {"id":1,
-        "active":true,
-        "skill":{
-          "id":1,
-          "name":"resume",
-          "workUnitSkills":[
-              {
-                "id":2,
-                "active":true,
-                "skill":{},
-                "workUnit":{}  
-              }
-          ]
-
-         },
-        "workUnit":{ }
-        }],
-    "additionalSkills":"lorem lorem lorem bonjour joel"
-  },
+ "id":1, 
+ "name":"Java 2",
+ "displayName":"Java programming 2",
+ "port":12,
+ "workSite":"yaounde",
+ "activeUntil":"15/4/2021",
+ "activeTrought":"15/4/2021",
+ 
+ "employeIdCode":"452201",
+ "namelocation":"elf yaounde",
+ "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia accusantium magni quam hic vero, dolore, incidunt alias facilis adipisci iusto officiis eaque velit repudiandae animi perspiciatis vitae voluptates cum sit.",
 
 
-  {
 
-    "id":3,
-   "name":"Developpeur_fullstack",
-    "activeUntil":"12/12/2021",
-    "displayName":"Developpeur",
-    "port":"2022",
-    "location":"Douala",
-    "workUnitSkills":[
-      {"id":3,
-     "active":true,
-     "skill":{
-       "id":1,
-       "name":"coufrse",
-       "workUnitSkills":[
-           {
-             "id":1,
-             "active":true,
-             "skill":{},
-             "workUnit":{}  
-           }
-       ]
+ "employeSkill":"text des jeunes",
+ "additionalSkills":"lorem texte",
+  
 
-      },
-     "workUnit":{ }
-     }],
-    "additionalSkills":"lorem lorem lorem bonjour joel"
-  }    
-  ]
-,
+
+   
+   "position":"loremme texte",
+   "shiftTime1":"loremme texte",
+   "shiftTime2":"loremme texte",
+   "mealTime1":"loremme texte",
+   "mealTime2":"loremme texte",
+   "rdocheck1":false,
+   "rdocheck2":true,
+  " rdocheck3":false,
+   "rdocheck4":true,
+   "rdocheck5":false,
+   "rdocheck6":true,
+   "rdocheck7":false,
+   "staggerRdo":"text"
+  
+},
+{
+
+  "id":2, 
+  "name":"Java",
+  "displayName":"Java programming",
+  "port":12,
+  "workSite":"douala",
+  "activeUntil":"15/4/2021",
+  "activeTrought":"15/4/2021",
+  
+  "employeIdCode":"452201",
+  "namelocation":"elf douala",
+  "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia accusantium magni quam hic vero, dolore, incidunt alias facilis adipisci iusto officiis eaque velit repudiandae animi perspiciatis vitae voluptates cum sit.",
+ 
+ 
+ 
+  "employeSkill":"text des jeunes",
+  "additionalSkills":"lorem texte",
+   
+ 
+ 
+    
+    "position":"loremme texte",
+    "shiftTime1":"loremme texte",
+    "shiftTime2":"loremme texte",
+    "mealTime1":"loremme texte",
+    "mealTime2":"loremme texte",
+    "rdocheck1":false,
+    "rdocheck2":true,
+   " rdocheck3":false,
+    "rdocheck4":true,
+    "rdocheck5":false,
+    "rdocheck6":true,
+    "rdocheck7":false,
+    "staggerRdo":"text"
+   
+ },
+ {
+
+  "id":3, 
+  "name":"PHP",
+  "displayName":"PHP programming",
+  "port":12,
+  "workSite":"douala",
+  "activeUntil":"15/4/2021",
+  "activeTrought":"15/4/2021",
+  
+  "employeIdCode":"452201",
+  "namelocation":"elf douala",
+  "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia accusantium magni quam hic vero, dolore, incidunt alias facilis adipisci iusto officiis eaque velit repudiandae animi perspiciatis vitae voluptates cum sit.",
+ 
+ 
+ 
+  "employeSkill":"text des jeunes",
+  "additionalSkills":"lorem texte",
+   
+ 
+ 
+    
+    "position":"loremme texte",
+    "shiftTime1":"loremme texte",
+    "shiftTime2":"loremme texte",
+    "mealTime1":"loremme texte",
+    "mealTime2":"loremme texte",
+    "rdocheck1":false,
+    "rdocheck2":true,
+   " rdocheck3":false,
+    "rdocheck4":true,
+    "rdocheck5":false,
+    "rdocheck6":true,
+    "rdocheck7":false,
+    "staggerRdo":"text"
+   
+ }
+
+],
 
 
     "employes": [

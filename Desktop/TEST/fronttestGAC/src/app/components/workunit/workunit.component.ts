@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { catchError, map, Observable, of, startWith } from 'rxjs';
 import { WorkUnit } from 'src/app/model/workunit.model';
 import { WorkunitService } from 'src/app/services/workunit.service';
@@ -17,10 +18,59 @@ export class WorkunitComponent implements OnInit {
   //state manager of app
   workunits$:Observable<AppDataState<WorkUnit[]>> |null=null;
   readonly DataStateEnum= DataStateEnum;
-  constructor(private workUnit:WorkunitService) { }
+
+
+  //variable to register form
+  employeFormGroup!:FormGroup;
+
+  constructor(
+    private workUnitService:WorkunitService,
+    private fb:FormBuilder) { }
 
   ngOnInit(): void {
     this.getAllWorkUnit();
+
+
+    //init form
+    this.employeFormGroup=this.fb.group({
+
+      //start section 1 control  
+      name:["", Validators.required],
+      displayName:["", Validators.required],
+      port:[0, Validators.required],
+      workSite:["", Validators.required],
+      activeUntil:[new Date, Validators.required],
+      activeTrought:[new Date, Validators.required],
+      //end section 1  control
+
+      //start section 2 control
+      employeIdCode:["", Validators.required],
+      namelocation:["", Validators.required],
+      description:["", Validators.required],
+      //end section 2 control
+
+      //start section 3  control
+      employeSkill:["", Validators.required],
+      additionalSkills:["", Validators.required],
+       //end section 3 control
+
+
+        //start section 4  control
+        position:["", Validators.required],
+        shiftTime1:["", Validators.required],
+        shiftTime2:["", Validators.required],
+        mealTime1:["", Validators.required],
+        mealTime2:["", Validators.required],
+        rdocheck1:[true, Validators.required],
+        rdocheck2:[true, Validators.required],
+        rdocheck3:[false, Validators.required],
+        rdocheck4:[true, Validators.required],
+        rdocheck5:[false, Validators.required],
+        rdocheck6:[true, Validators.required],
+        rdocheck7:[true, Validators.required],
+        staggerRdo:["", Validators.required],
+       //end section 4 control
+    })
   }
 
 
@@ -49,7 +99,7 @@ next() {
 
 //get all employees
  getAllWorkUnit(){
- this.workunits$=this.workUnit.getAllWorkUnit().pipe(
+ this.workunits$=this.workUnitService.getAllWorkUnit().pipe(
       map(data=>({dataState:DataStateEnum.LOADED, data:data})),
       startWith({dataState:DataStateEnum.LOADING}),
       catchError(err=>of({dataState:DataStateEnum.ERROR,errorMessage:err.message}))
@@ -60,5 +110,14 @@ next() {
 console.log(this.workunits$);
 
 
+}
+
+
+onSaveNewWorkUnit(){
+  this.workUnitService.registerWorkUnit(this.employeFormGroup?.value).subscribe(
+    dat=>{
+      alert("Success saving employees");
+    }
+  )
 }
 }
