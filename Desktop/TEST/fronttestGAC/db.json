@@ -1,0 +1,167 @@
+{ 
+  
+"workunits":[
+  {
+
+    "id":1,
+   "name":"Developpeur_mobile",
+    "activeUntil":"12/12/2021",
+    "displayName":"Developpeur",
+    "port":"20",
+    "location":"Douala",
+    "workUnitSkills":[
+      {"id":1,
+     "active":true,
+     "skill":{
+       "id":1,
+       "name":"course",
+       "workUnitSkills":[
+           {
+             "id":1,
+             "active":true,
+             "skill":{},
+             "workUnit":{}  
+           }
+       ]
+
+      },
+     "workUnit":{ }
+     }],
+    "additionalSkills":"lorem lorem lorem bonjour joel"
+  }  ,
+
+  {
+
+    "id":2,
+   "name":"Developpeur_web",
+    "activeUntil":"12/12/2021",
+    "displayName":"Developpeur",
+    "port":"22",
+    "location":"Douala",
+    "workUnitSkills":[
+         {"id":1,
+        "active":true,
+        "skill":{
+          "id":1,
+          "name":"resume",
+          "workUnitSkills":[
+              {
+                "id":2,
+                "active":true,
+                "skill":{},
+                "workUnit":{}  
+              }
+          ]
+
+         },
+        "workUnit":{ }
+        }],
+    "additionalSkills":"lorem lorem lorem bonjour joel"
+  },
+
+
+  {
+
+    "id":3,
+   "name":"Developpeur_fullstack",
+    "activeUntil":"12/12/2021",
+    "displayName":"Developpeur",
+    "port":"2022",
+    "location":"Douala",
+    "workUnitSkills":[
+      {"id":3,
+     "active":true,
+     "skill":{
+       "id":1,
+       "name":"coufrse",
+       "workUnitSkills":[
+           {
+             "id":1,
+             "active":true,
+             "skill":{},
+             "workUnit":{}  
+           }
+       ]
+
+      },
+     "workUnit":{ }
+     }],
+    "additionalSkills":"lorem lorem lorem bonjour joel"
+  }    
+  ]
+,
+
+
+    "employes": [
+      {
+        
+      "id":1,
+      "name":"joel",
+      "port":"152",
+      "work_site":"joel texte",
+      "active_from":"supprimer ",
+      "active_trought":"active ",
+      "employe_id_code":"dfd4545454",
+      "work_location":"douala",
+      "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia accusantium magni quam hic vero, dolore, incidunt alias facilis adipisci iusto officiis eaque velit repudiandae animi perspiciatis vitae voluptates cum sit.",
+      "employe_skill":"lorem lorem",
+      "additional_skill":"add deqtq",
+      "position":" bp 257",
+      "shift_time":"2000",
+      "meal_times":"55500",
+      "rdos":"021532",
+      "stragger_rdos":"45221212",
+      "selected":true
+      },
+      {
+        
+        "id":2,
+        "name":"placide",
+        "port":"152",
+        "work_site":"placide texte",
+        "active_from":"supprimer ",
+        "active_trought":"active ",
+        "employe_id_code":"dfd4545454",
+        "work_location":"douala",
+        "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia accusantium magni quam hic vero, dolore, incidunt alias facilis adipisci iusto officiis eaque velit repudiandae animi perspiciatis vitae voluptates cum sit.",
+        "employe_skill":"lorem lorem",
+        "additional_skill":"add deqtq",
+        "position":" bp 257",
+        "shift_time":"2000",
+        "meal_times":"55500",
+        "rdos":"021532",
+        "stragger_rdos":"1dff212",
+        "selected":true
+        },
+        {
+          
+          "id":3,
+          "name":"hermann",
+          "port":"152",
+          "work_site":"hermann texte",
+          "active_from":"supprimer ",
+          "active_trought":"active ",
+          "employe_id_code":"dfd4545454",
+          "work_location":"douala",
+          "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia accusantium magni quam hic vero, dolore, incidunt alias facilis adipisci iusto officiis eaque velit repudiandae animi perspiciatis vitae voluptates cum sit.",
+          "employe_skill":"lorem lorem",
+          "additional_skill":"add deqtq",
+          "position":" bp 257",
+          "shift_time":"204500",
+          "meal_times":"550",
+          "rdos":"02153dfgf2",
+          "stragger_rdos":"1dff212",
+          "selected":true
+          }
+
+
+
+    ]
+
+   
+
+    
+
+
+  }
+  

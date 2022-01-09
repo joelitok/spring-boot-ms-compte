@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employees</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div  class="modal"
+      tabindex="-1"
+      role="dialog"
+      [ngStyle]="{'display':displayStyle}">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" class="text-primary"> <strong> New Employee</strong> </h4>
+          </div>
+          <div class="modal-body">
+            <form>
+                
+
+            <div class="row">
+                <div class="col">
+
+
+                 <ng-container *ngIf="panelNum == 1"> 
+                     <div class="form-group">
+                    <label class="text-primary">Employee name</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                   </div>
+                  <div class="form-group">
+                      <div class="row">
+                          <div class="col">
+                            <label style="color: #fa3a0e;">Display name:</label>
+                            <input type="text" class="form-control" style="border-color:#fa3a0e ;">
+                          </div>
+                          <div class="col">
+
+                          </div>
+                      </div>
+                   <div   class="mt-4" style="background-color: gray; height: 3px;"> </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Port:</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                   </div>
+                   <div class="form-group">
+                    <label for="">WorK Site:</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                   </div>
+                   <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                          <label for="">Active from:</label>
+                          <input type="date" class="form-control"  placeholder="name">
+                        </div>
+                        <div class="col">
+                            <label for="">Active trought:</label>
+                            <input type="date" class="form-control"  placeholder="name">
+                         
+                        </div>
+                        <div class="col">
+
+                        </div>
+                    </div>
+                 <div   class="mt-4" style="background-color: gray; height: 3px;"> </div>
+                </div>
+               
+
+
+                </ng-container>
+                 <ng-container *ngIf="panelNum == 2"> 
+                    <div class="form-group">
+                        <label for="">Employee IDCode:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Work Location:</label>
+                                <select name=""class="form-control"  id="">
+                                    <option>  </option>
+                                    <option value=""> Douala</option>
+                                    <option value=""> Yaounde</option>
+                                    <option value=""> Bafoussam</option>
+                                </select>
+                         
+                            </div>
+                            <div class="col">
+
+                            </div>
+                        </div>
+                          </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Description</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                 </ng-container>
+                 <ng-container *ngIf="panelNum == 3"> 
+                     <div class="form-group">
+                         <label> Employees Skills</label>
+                        <select name=""class="form-control"  id="">
+                            <option>  </option>
+                            <option value=""> Douala</option>
+                            <option value=""> Yaounde</option>
+                            <option value=""> Bafoussam</option>
+                        </select>
+                     </div>
+                   
+                    <div class="form-group">
+                        <label >Additional Skills</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                    </div>
+            
+                </ng-container>
+                 <ng-container *ngIf="panelNum == 4"> 
+ 
+                   <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for=""> .</label>
+                            <input type="text" class="form-control" value="supervisor" disabled>
+                        </div> 
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="">Position: </label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label >Shift times: </label>
+                            <div class="row">
+                                <div class="col">
+
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col">
+
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   </div>
+                   <div class="row">
+                       <div class="col">
+                        <div class="form-group">
+                            <label for="">Meal times (Opt): </label>
+                            <div class="row">
+                                <div class="col">
+
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col">
+
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+
+                       <div class="col">
+                        <div class="form-group form-check">
+                            <label for=""> RDOs (eg: 1 for monday) </label>
+                            <div class="row d-flex">
+                              <div class="col">
+                                  <input type="checkbox" name="" class="form-check-input"></div>
+                              <div class="col">
+                             <input type="checkbox" name="" class="form-check-input"></div>
+                              <div class="col">
+                            
+                                   <input type="checkbox" name="" class="form-check-input"></div>
+                              <div class="col">
+                    
+
+                                <input type="checkbox" name="" class="form-check-input"></div>
+                              <div class="col">
+                          
+                                <input type="checkbox" name="" class="form-check-input"></div>
+                              <div class="col">
+                                
+                                   <input type="checkbox" name="" class="form-check-input"></div>
+                              <div class="col">
+                            
+                                  <input type="checkbox" name="" class="form-check-input"></div>
+                                </div>
+                        </div>
+                        
+                       </div>
+                       
+                   </div>
+
+                   <div class="row mb-3">
+                       <div class="col">
+                        <label> Stagger RDOs:</label>
+                        <select  class="form-control" >
+                           
+                            <option value=""> N/A</option>
+                            <option value=""> N/B</option>
+                            <option value=""> N/C</option>
+                        </select>
+                       </div>
+                       <div class="col">
+
+                       </div>
+                   </div>
+                    
+
+                 </ng-container>
+                
+
+               </div>
+              </div>
+
+        </form>   
+
+              <div class="row mb-5 mt-0">
+              <div class="col">
+                 <div >
+
+                 </div>
+               
+                 <button type="button" class="btn btn-primary float-right" *ngIf="panelNum == 4">submit</button>
+                 <button type="button" class="btn btn-primary float-right" (click)="next()" *ngIf="panelNum < 4">Next</button>
+                 
+                 <button type="button" class="btn btn-outline-primary border border-primary float-right" (click)="closePopup()">Cancel</button>
+                 
+                 <button type="button" class="btn btn-outline-primary border border-primary" (click)="prev()">Back</button>
+                </div>
+               </div>
+      
+          </div>
+         
+        </div>
+      </div>
+    </div>
+
+
+    
+
+
+
+
+
+  <div class="main-content">
+    <div class="container mt-7">
+      
+      <h2 class="mb-5">Global Assets Cameroon</h2><div class="row">
+
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header border-0">
+                <div class="row"> 
+                    <div class="col"><h2 class="mb-0" style="text-align: left"> <strong class="text-primary"> Employee Manager Portal</strong>  </h2></div>
+                    <div class="col"><h3 class="mb-0" style="text-align: right;"> <button type="button" class="btn btn-outline-primary border border-primary" (click)="openPopup()"> <span class="fa fa-plus"> </span> New Employee</button></h3></div>
+                </div>
+              
+            </div>
+            <div class="card-header border-0 mb-3">
+                <div class="row"> 
+                    <div class="col"><p class="mb-0" style="text-align: left"> <strong> <span class="fa fa-filter"> </span> &nbsp; Additional filter </strong> </p></div>
+                    <div class="col"><h3 class="mb-0" style="text-align: right;">  <strong> <span class="fa fa-angle-up"> </span> </strong> </h3></div>
+                </div>
+              
+            </div>
+
+            <div class="table-responsive">
+                <div class="row mb-3"> 
+                    <div class="col ml-5">Work Site
+                        <br>
+                        <select class="form-control"> 
+                         <option value="">All </option>
+                         <option value="">fd</option>
+                         <option value="">3Lorem ipsum</option>
+                     </select>
+                    </div>
+                    <div class="col">Status
+                     <br>
+                     <select class="form-control"> 
+                         <option value="">Active </option>
+                         <option value="">2Lorem ipsum</option>
+                         <option value="">3Lorem ipsum</option>
+                     </select>
+                 </div>
+                 <div class="col">Flex 
+                     <br>
+                     <select class="form-control"> 
+                         <option value="">All</option>
+                         <option value="">2Lorem ifsum</option>
+                         <option value="">3Lorem ipsum</option>
+                     </select>
+                 </div>
+                 <div class="col"></div>
+                 <div class="col"></div>
+                </div> 
+           <ng-container *ngIf="workunits$ | async as result" [ngSwitch]="result.dataState">
+
+              <table class="table align-items-center table-flush" *ngIf="workunits$ | async as result" [ngSwitch]="result.dataState">
+              <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+
+              
+                <thead class="thead-light">
+                  <tr >
+                    <td scope="col"><strong style="font-size: 15px;">  Work Unit <span class="fa fa-arrow-down"> </span> </strong></td>
+                    <td scope="col"><strong style="font-size: 15px;"> Work Site</strong></td>
+                    <td scope="col"><strong style="font-size: 15px;"> Unit Size</strong></td>
+                    <td scope="col"><strong style="font-size: 15px;"> Active Until</strong></td>
+                    <td scope="col"><strong style="color: red;font-size: 15px;"> Flex-capable <span class="fa fa-warning"> </span> </strong></td>
+                    <td scope="col"></td>
+                  </tr>
+                </thead>
+                <tbody  >
+                  <tr *ngFor="let workUnit of result.data orderBy:'asc'">
+                    
+                      <td>
+                          {{workUnit.name}}
+                      </td>
+                      
+                         
+                       
+                    
+                    <td>
+                      {{workUnit.activeUntil}}
+                    </td>
+                    <td>
+                      <span class="badge badge-dot mr-4">
+                        <i class="bg-success"></i> completed
+                      </span>
+                    </td>
+                    <td>
+                     user 1
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2">100%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right">
+                      <div class="dropdown">
+                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-trash" style="color: #fa3a0e; font-size: 25px;"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+
+              </ng-container>
+              </table>
+              </ng-container>
+            </div>
+           </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="row align-items-center justify-content-xl-between">
+      <div class="col-xl-6 m-auto text-center">
+        <div class="copyright"><p>Global Assets Cameroon</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+ 
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
